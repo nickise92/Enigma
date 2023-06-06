@@ -1,0 +1,3 @@
+C:/Users/alpie/OneDrive - Università degli Studi di Verona/PERSONALE/C_Programming/Enigma/cmake-build-debug/CMakeFiles/Enigma.dir
+C:/Users/alpie/OneDrive - Università degli Studi di Verona/PERSONALE/C_Programming/Enigma/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/alpie/OneDrive - Università degli Studi di Verona/PERSONALE/C_Programming/Enigma/cmake-build-debug/CMakeFiles/rebuild_cache.dir
