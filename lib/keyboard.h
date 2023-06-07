@@ -7,6 +7,6 @@
 
 #define KB "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-void setPlugboard(char * settings);
+void setPlugboard(char * settings, char * plugboard);
 
 #endif //ENIGMA_KEYBOARD_H

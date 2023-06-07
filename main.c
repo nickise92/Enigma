@@ -16,20 +16,30 @@
 
 int main() {
     int i;
-    char keyboard[26] = KB;
-    char * plugboard = NULL;
-    char r1[] = "EKMFLGDQVZNTOWYHXUSPAIBRCJ";
-    char r2[] = "AJDKSIRUXBLHWTMCQGZNPYFVOE";
-    char r3[] = "BDFHJLCPRTXVZNYEIWGAKMUSQO";
-
+    char keyboard[] = KB;
+    char plugboard[] = KB;
+    char r1Right[] = "EKMFLGDQVZNTOWYHXUSPAIBRCJ";
+    char r1Left[] = KB;
+    char r2Right[] = "AJDKSIRUXBLHWTMCQGZNPYFVOE";
+    char r2Left[] = KB;
+    char r3Right[] = "BDFHJLCPRTXVZNYEIWGAKMUSQO";
+    char r3Left[] = KB;
+    char key[] = "CAT";
     // Plugboard setup
     char settings[] = "AG DK ZT";
-    setPlugboard(settings);
+    printf("Starting PLUGBOARD setup...\n");
+    printf("%s\n", plugboard);
+    setPlugboard(settings, plugboard);
+    printf("%s\n", plugboard);
+    printf("Done.\n\nStarting ROTORS setup with key: '%s'...\n", key);
     // Rotors setup
-//    showRotors(r1, r2, r3);
-//    setKey("CAT", r1, r2, r3);
-//    showRotors(r1, r2, r3);
+    setKey(key, r1Left, r2Left, r3Left);
+    showRotors(r1Left, r1Right, r2Left);
+    showRotors(r2Right, r3Left, r3Right);
+    printf("Done.\n\n");
 
-
+    //Encipher letter "A"
+    char c = encipher('A', r1Left, r1Right,r2Left, r2Right, r3Left, r3Right, plugboard, keyboard);
+    printf("%c\n", c);
     return 0;
 }
